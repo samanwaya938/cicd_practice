@@ -9,5 +9,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        steps: "My first cicd practice"
+        run: echo "My first CI/CD practice"
         # uses: actions/checkout@v2
