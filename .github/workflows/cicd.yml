@@ -8,6 +8,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout code
+        uses: actions/checkout@v3  # Correct usage of `uses` for the checkout action
+
+      - name: Print a message
         run: echo "My first CI/CD practice"
         # uses: actions/checkout@v2
