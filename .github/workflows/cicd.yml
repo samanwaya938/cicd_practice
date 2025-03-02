@@ -1,0 +1,13 @@
+name: My cicd practice
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        steps: "My first cicd practice"
+        # uses: actions/checkout@v2
