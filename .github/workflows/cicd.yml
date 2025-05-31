@@ -27,7 +27,8 @@ jobs:
 
       - name: Run unit tests
         run: |
-          pytest tests/
+          # pytest tests/    # if you have tests folder in root directory
+          pytest    # Auto-detect all tests
 
   build-and-push:
     name: Build and Push Docker Image
