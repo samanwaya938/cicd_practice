@@ -1,13 +1,17 @@
-# create a dockerfile
-
-FROM python:3.8
+# Use slim image for smaller size
+FROM python:3.10-slim
 
 WORKDIR /app
 
-COPY . /app
+# Copy only necessary files (consider adding .dockerignore)
+COPY . .
 
-RUN pip install --upgrade pip
+# Upgrade pip and install dependencies
+RUN pip install --upgrade pip && \
+    pip install -r requirements.txt
 
-RUN pip install -r requirements.txt
+# Document the container port
+EXPOSE 5000
 
+# Run the application
 CMD ["python", "app.py"]
